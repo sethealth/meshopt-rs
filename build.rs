@@ -50,10 +50,10 @@ fn main() {
         // The Wasm backend needs a compatible ar
         // which will most likely be available under
         // this name on Windows, via manual LLVM install
-        let host = env::var("HOST").unwrap();
-        if host.contains("windows") {
-            build.archiver("llvm-ar");
-        }
+        // let host = env::var("HOST").unwrap();
+        // if host.contains("windows") {
+        // }
+        build.archiver("llvm-ar");
     }
 
     build.compile("meshopt_cpp");
